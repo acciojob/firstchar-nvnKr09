@@ -1,8 +1,23 @@
 function firstChar(text) {
-  // your code here
-	var firstChar = text.charAt(0);
-	return firstChar;
+	// Check if the inputString is empty or contains only spaces
+  if (text.trim() === '') {
+    return '';
+  }
+
+  // Iterate through the characters in the string
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+
+    // If the character is not a space, return it
+    if (char !== ' ') {
+      return char;
+    }
+  }
+
+  // If all characters are spaces, return an empty string
+  return '';
 }
+
 
 // Do not change the code below
 
